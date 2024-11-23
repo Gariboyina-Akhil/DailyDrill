@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Generate a Question</h2>
+    <select [(ngModel)]="selectedTopic">
+      <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+    </select>
+    <button (click)="getQuestion()">Generate</button>
+    <div *ngIf="question" class="question-box">
+      <h3>Generated Question:</h3>
+      <p>{{ question }}</p>
+    </div>
+</div>
